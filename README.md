@@ -1,4 +1,4 @@
-html_code_youtube = """<!DOCTYPE html>
+html_code_fixed = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,18 @@ html_code_youtube = """<!DOCTYPE html>
         .video-container {
             margin-top: 20px;
         }
+        .video-container button {
+            background-color: #ff69b4;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .video-container button:hover {
+            background-color: #ff1493;
+        }
         .message {
             margin-top: 40px;
             font-size: 1.5em;
@@ -27,8 +39,15 @@ html_code_youtube = """<!DOCTYPE html>
         iframe {
             margin-top: 10px;
             border-radius: 10px;
+            display: none; /* Скрываем видео по умолчанию */
         }
     </style>
+    <script>
+        function showVideo() {
+            document.getElementById('videoFrame').style.display = 'block';
+            document.getElementById('watchButton').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
 
@@ -36,7 +55,9 @@ html_code_youtube = """<!DOCTYPE html>
 
     <div class="video-container">
         <p>А вот и наше первое видео ^-^</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FOggJF2ipcU" 
+        <button id="watchButton" onclick="showVideo()">Посмотреть</button>
+        <iframe id="videoFrame" width="560" height="315" 
+            src="https://www.youtube.com/embed/FOggJF2ipcU" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
             clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
