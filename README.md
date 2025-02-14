@@ -49,16 +49,3 @@ html_code_youtube = """<!DOCTYPE html>
 </body>
 </html>
 """
-
-# Сохраняем обновленный HTML-файл
-file_path_youtube = "/mnt/data/index.html"
-with open(file_path_youtube, "w", encoding="utf-8") as file:
-    file.write(html_code_youtube)
-
-# Создаём ZIP-архив с новым HTML-файлом
-zip_path_youtube = "/mnt/data/romantic_site.zip"
-with zipfile.ZipFile(zip_path_youtube, 'w') as zipf:
-    zipf.write(file_path_youtube, arcname="index.html")
-
-# Предоставляем ссылку на скачивание
-zip_path_youtube
