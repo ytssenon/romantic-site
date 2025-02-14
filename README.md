@@ -1,4 +1,4 @@
-html_code_fixed = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,18 +36,7 @@ html_code_fixed = """<!DOCTYPE html>
             font-style: italic;
             color: #d87093;
         }
-        iframe {
-            margin-top: 10px;
-            border-radius: 10px;
-            display: none; /* Скрываем видео по умолчанию */
-        }
     </style>
-    <script>
-        function showVideo() {
-            document.getElementById('videoFrame').style.display = 'block';
-            document.getElementById('watchButton').style.display = 'none';
-        }
-    </script>
 </head>
 <body>
 
@@ -55,12 +44,9 @@ html_code_fixed = """<!DOCTYPE html>
 
     <div class="video-container">
         <p>А вот и наше первое видео ^-^</p>
-        <button id="watchButton" onclick="showVideo()">Посмотреть</button>
-        <iframe id="videoFrame" width="560" height="315" 
-            src="https://www.youtube.com/embed/FOggJF2ipcU" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+        <a href="https://drive.google.com/file/d/1D4f7X27-7Je8tGxF-MtDx3CHP-u82qi4/view?usp=drivesdk" target="_blank">
+            <button>Посмотреть</button>
+        </a>
     </div>
 
     <div class="message">
@@ -69,4 +55,3 @@ html_code_fixed = """<!DOCTYPE html>
 
 </body>
 </html>
-"""
